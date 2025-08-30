@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-- Link para ícones da biblioteca Boxicons -->
+    <link rel="stylesheet" href="stylelogin.css"> 
+    <title>Mercadin - Login</title> 
+</head>
+<body>
+    <div class="estrelas"></div> <!-- Div das estrelas -->
+    <div class="formulario">
+        <h1>Login</h1>
+        <form action="login.php" method="POST">
+            
+            <div class="caixa-formulario">
+                <input type="text" name="nomeusuario" placeholder="Nome de usuário" required>
+                <i class='bx bxs-user'></i> 
+            </div>
+            <div class="caixa-formulario">
+                <input type="password" name="senha" placeholder="Senha" required> 
+                <i class="bx bxs-lock-alt"></i> 
+            </div>
+
+            <div class="caixa-esqueci-senha">
+                <label for=""><input type="checkbox">Lembrar</label> 
+                <a href="#">Esqueci minha senha</a> <!-- Link para recuperação de senha, adicionar link futuramente -->
+            </div>
+
+            <button type="submit">Entrar</button> 
+            
+            <div class="link-registro">
+                <p>Não tem uma conta? <a href="Cadastro.html">Cadastre-se</a></p> <!-- Link para cadastro de nova conta, adicionar link futuramente -->
+            </div>
+        </form>
+    </div>
+</body>
+</html>
