@@ -59,7 +59,7 @@ echo "Bem-vindo, " . htmlspecialchars($_SESSION['usuario']) . "!";
                 </a>
 
                 <!-- Ícone do carrinho com contador -->
-                <a href="cart.php" class="cart-link" style="position:relative; display:inline-flex; align-items:center; gap:6px;">
+                <a href="carrinho.php" class="cart-link" style="position:relative; display:inline-flex; align-items:center; gap:6px;">
                     <img width="30" height="30" src="https://img.icons8.com/material-outlined/30/ffffff/shopping-cart--v1.png" alt="shopping-cart--v1" />
                     <span id="cart-count" style="font-size:14px;"><?php echo (int)$cartCount; ?></span>
                 </a>
@@ -70,14 +70,6 @@ echo "Bem-vindo, " . htmlspecialchars($_SESSION['usuario']) . "!";
             </div>
         </section>
     </header>
-
-
-
-
-
-
-
-
 
     <!-- Shop.js: funções de API (ajuste o caminho conforme sua estrutura de pastas) -->
     <script src="js/shop.js"></script>
@@ -148,17 +140,6 @@ echo "Bem-vindo, " . htmlspecialchars($_SESSION['usuario']) . "!";
 ?>
 
 </head>
-
-
-
-<body>
-    <header class="header">
-        <section>
-
-            </a>
-
-        </section>
-    </header>
 
     <div class="home-container">
         <section id="inicio">
