@@ -67,10 +67,7 @@ section{
     margin: 1rem;
     cursor: pointer;
 }
-.icons img:hover {
-    width: 40px;
-    height: 40px;
-}
+
 
 .btn {
     background: var(--main-color);
@@ -121,13 +118,13 @@ section{
     text-align: center;
     text-transform: uppercase; 
     margin-bottom: 4rem;
- }
+}
 
- .title span {
+.title span {
     color: #fff;
- }
+}
 
- .sobre .row {
+.sobre .row {
     display: flex;
     align-items: center;
     background-color: var(--black);
@@ -222,4 +219,37 @@ section{
     background-color: var(--main-color);
 }
 
+/* Ajuste geral de ícones */
+.header .icons a { color: inherit; text-decoration:none; display:inline-flex; align-items:center; gap:.6rem; }
+
+/* Badge do carrinho */
+.cart-link { position: relative; }
+#cart-count {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    font-size: 11px;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 999px;
+    background: var(--main-color); /* ou outra cor */
+    color: #fff;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.4);
+}
+
+/* Nome do usuário próximo ao ícone */
+.user-link .username {
+    margin-left: .4rem;
+    font-size: 1.5rem;
+    color: var(--main-color);
+    font-weight: 400;
+}
+
+/* Opcional: esconder nome em telas muito pequenas */
+@media (max-width:600px){
+    .user-link .username { display:none; }
+}
 

@@ -30,7 +30,7 @@ $cartCount = array_sum(array_column($_SESSION['cart'] ?? [], 'qty'));
 $stmt = $pdo->query('SELECT id, nome AS name, preco AS price, estoque AS stock, imagem AS image FROM produtos ORDER BY id');
 $products = $stmt->fetchAll();
 
-echo "Bem-vindo, " . htmlspecialchars($_SESSION['usuario']) . "!";
+
 ?>
 </head>
 
@@ -51,21 +51,25 @@ echo "Bem-vindo, " . htmlspecialchars($_SESSION['usuario']) . "!";
             </nav>
 
             <div class="icons">
-                <a href="<?php echo $logado ? 'usuario.php' : 'login.html'; ?>">
+                <!-- Ícone de busca (se você tiver página de busca, ajuste o href) -->
+                <a href="#" class="search-link" title="Pesquisar">
                     <img width="30" height="30" src="https://img.icons8.com/windows/30/ffffff/search--v1.png" alt="search--v1" />
-                    <?php if ($logado): ?>
-                        <span><?php echo htmlspecialchars($_SESSION['usuario']); ?></span>
+                </a>
+
+                <!-- Ícone do carrinho com contador (badge escondida quando 0) -->
+                <a href="carrinho.php" class="cart-link" style="position:relative; display:inline-flex; align-items:center; gap:6px;" title="Carrinho">
+                    <img width="30" height="30" src="https://img.icons8.com/material-outlined/30/ffffff/shopping-cart--v1.png" alt="shopping-cart--v1" />
+                    <?php if ((int)$cartCount > 0): ?>
+                        <span id="cart-count" aria-label="Itens no carrinho"><?php echo (int)$cartCount; ?></span>
                     <?php endif; ?>
                 </a>
 
-                <!-- Ícone do carrinho com contador -->
-                <a href="carrinho.php" class="cart-link" style="position:relative; display:inline-flex; align-items:center; gap:6px;">
-                    <img width="30" height="30" src="https://img.icons8.com/material-outlined/30/ffffff/shopping-cart--v1.png" alt="shopping-cart--v1" />
-                    <span id="cart-count" style="font-size:14px;"><?php echo (int)$cartCount; ?></span>
-                </a>
-
-                <a href="login.html" target="_blank">
+                <!-- Ícone de usuário: vai para usuario.php quando logado, senão para login.html -->
+                <a href="<?php echo $logado ? 'usuario.php' : 'login.html'; ?>" class="user-link" title="Minha conta">
                     <img width="30" height="30" src="https://img.icons8.com/material-sharp/30/ffffff/user-male-circle.png" alt="user-male-circle">
+                    <?php if ($logado): ?>
+                        <span class="username"><?php echo htmlspecialchars($_SESSION['usuario']); ?></span>
+                    <?php endif; ?>
                 </a>
             </div>
         </section>
