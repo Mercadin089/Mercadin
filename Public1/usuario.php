@@ -42,7 +42,7 @@ $cartCount = array_sum(array_column($_SESSION['cart'] ?? [], 'qty'));
 <header class="header">
     <section>
         <a href="index.php" class="logo">
-            <img src="" alt="logo">
+            <img src="img/logo.jpeg" alt="logo" height="50px" width="50px">
         </a>
 
         <nav class="navbar">
@@ -54,9 +54,6 @@ $cartCount = array_sum(array_column($_SESSION['cart'] ?? [], 'qty'));
         </nav>
 
         <div class="icons">
-            <a href="#" class="search-link" title="Pesquisar">
-                <img width="30" height="30" src="https://img.icons8.com/windows/30/ffffff/search--v1.png" alt="search--v1"/>
-            </a>
 
             <a href="carrinho.php" class="cart-link" title="Carrinho">
                 <img width="30" height="30" src="https://img.icons8.com/material-outlined/30/ffffff/shopping-cart--v1.png" alt="shopping-cart--v1"/>
@@ -95,11 +92,11 @@ $cartCount = array_sum(array_column($_SESSION['cart'] ?? [], 'qty'));
                     </p>
                     <p style="font-size: 1.8rem; margin-bottom: 2rem; color: #fff;">
                         <strong style="color: var(--main-color);">Tipo de conta:</strong> 
-                        <?php echo $dados['tipo'] === 'admin' ? 'Administrador' : 'Cliente'; ?>
+                        <?php echo $dados['tipo'] === 'vendedor' ? 'vendedor' : 'Cliente'; ?>
                     </p>
                     <a href="logout.php" class="btn" style="background: #ff4444;">Sair da Conta</a>
-                    <?php if ($dados['tipo'] === 'admin'): ?>
-                        <a href="admin.php" class="btn" style="background: #27ae60; margin-left: 1rem;">Painel Admin</a>
+                    <?php if ($dados['tipo'] === 'vendedor'): ?>
+                        <a href="vendedor.php" class="btn" style="background: #27ae60; margin-left: 1rem;">Painel do Vendedor</a>
                     <?php endif; ?>
                 </div>
             </div>

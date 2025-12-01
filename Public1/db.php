@@ -4,7 +4,7 @@ declare(strict_types=1);
 $DB_HOST = 'localhost';
 $DB_NAME = 'mercadin'; // o nome que você criou no phpMyAdmin
 $DB_USER = 'root';
-$DB_PASS = ''; // vazio no XAMPP por padrão
+$DB_PASS = ''; // vazio// vazio no XAMPP por padrão
 
 $dsn = "mysql:host={$DB_HOST};dbname={$DB_NAME};charset=utf8mb4";
 

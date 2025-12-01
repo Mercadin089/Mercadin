@@ -98,7 +98,7 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
     <header class="header">
         <section>
             <a href="index.php" class="logo">
-                <img src="" alt="logo">
+                <img src="img/logo.jpeg" alt="logo" width="50px" height="50px">
             </a>
             <nav class="navbar">
                 <a href="index.php">Início</a>
@@ -106,11 +106,10 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
                 <a href="index.php#prom">Promoções</a>
                 <a href="index.php#ender">Endereço</a>
                 <a href="produtos.php">Produtos</a>
+                <a href="vendedor.php">Vendedor</a>
             </nav>
             <div class="icons">
-                <a href="#" class="search-link" title="Pesquisar">
-                    <img width="30" height="30" src="https://img.icons8.com/windows/30/ffffff/search--v1.png" alt="search--v1"/>
-                </a>
+
                 <a href="carrinho.php" class="cart-link" style="position:relative; display:inline-flex; align-items:center; gap:6px;" title="Carrinho">
                     <img width="30" height="30" src="https://img.icons8.com/material-outlined/30/ffffff/shopping-cart--v1.png" alt="shopping-cart--v1"/>
                     <?php if ((int)$cartCount > 0): ?>

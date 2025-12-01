@@ -29,21 +29,19 @@ $cartCount = array_sum(array_column($_SESSION['cart'] ?? [], 'qty'));
     <header class="header">
         <section>
             <a href="#" class="logo">
-                <img src="" alt="logo">
+                <img src="img/logo.jpeg" alt="logo" width="50px" height="50px">
             </a>
 
             <nav class="navbar">
-                <a href="#inicio">Início</a>
-                <a href="#sobre">Sobre</a>
-                <a href="#prom">Promoções</a>
-                <a href="#ender">Endereço</a>
+                <a href="index.php">Início</a>
+                <a href="index.php#sobre">Sobre</a>
+                <a href="index.php#prom">Promoções</a>
+                <a href="index.php#ender">Endereço</a>
                 <a href="produtos.php">Produtos</a>
+                <a href="vendedor.php">Vendedor</a>
             </nav>
 
             <div class="icons">
-                <a href="#" class="search-link" title="Pesquisar">
-                    <img width="30" height="30" src="https://img.icons8.com/windows/30/ffffff/search--v1.png" alt="search--v1"/>
-                </a>
 
                 <a href="carrinho.php" class="cart-link" style="position:relative; display:inline-flex; align-items:center; gap:6px;" title="Carrinho">
                     <img width="30" height="30" src="https://img.icons8.com/material-outlined/30/ffffff/shopping-cart--v1.png" alt="shopping-cart--v1"/>
